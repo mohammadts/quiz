@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <div id="questionario">
+      <h2 id="pergunta"></h2>
+      <div id="opcoes">
+        <div class="opcao" onclick="salvarSelecao(1)">
+          <input type="radio" name="resposta" id="resposta-1" value="1" />
+          <label id="r1" for="resposta-1"></label>
+        </div>
+        <div class="opcao" onclick="salvarSelecao(2)">
+          <input type="radio" name="resposta" id="resposta-2" value="2" />
+          <label id="r2" for="resposta-2"></label>
+        </div>
+        <div class="opcao" onclick="salvarSelecao(3)">
+          <input type="radio" name="resposta" id="resposta-3" value="3" />
+          <label id="r3" for="resposta-3"></label>
+        </div>
+        <div class="opcao" onclick="salvarSelecao(4)">
+          <input type="radio" name="resposta" id="resposta-4" value="4" />
+          <label id="r4" for="resposta-4"></label>
+        </div>
+      </div>
+      <div class="button-group">
+        <button id="pergunta-anterior">Pergunta anterior</button>
+        <button id="proxima-pergunta" onclick="proximaPergunta()">
+          Próxima pergunta
+        </button>
+      </div>
+    </div>
+    <div id="resultado" class="hide">
+      <div class="box-resultado">
+        <div id="gabarito-1" class="gabarito hide">
+          <h3>Questão 1</h3>
+          <div class="item-gabarito">
+            <p>Você marcou:</p>
+            <p id="g1"></p>
+          </div>
+          <div class="item-gabarito">
+            <p>Alternativa correta:</p>
+            <p id="gc1"></p>
+          </div>
+        </div>
+        <div id="gabarito-2" class="gabarito hide">
+          <h3>Questão 2</h3>
+          <div class="item-gabarito">
+            <p>Você marcou:</p>
+            <p id="g2"></p>
+          </div>
+          <div class="item-gabarito">
+            <p>Alternativa correta:</p>
+            <p id="gc2"></p>
+          </div>
+        </div>
+        <div id="gabarito-3" class="gabarito hide">
+          <h3>Questão 3</h3>
+          <div class="item-gabarito">
+            <p>Você marcou:</p>
+            <p id="g3"></p>
+          </div>
+          <div class="item-gabarito">
+            <p>Alternativa correta:</p>
+            <p id="gc3"></p>
+          </div>
+        </div>
+        <h2 id="texto-resultado"></h2>
+        <button id="tentar-novamente" onclick="window.location.reload(true)">
+          Tentar Novamente
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
